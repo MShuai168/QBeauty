@@ -1,0 +1,87 @@
+
+#import <UIKit/UIKit.h>
+
+@interface UIView (EasyFrames)
+
+//Calls setupSettings;
+
+//-(void)setTimeForRect;
+
+-(id)initAttach:(id)superItem;
+
+//-(void)setupSettings;
+
+-(void)setRotation:(CGFloat)rotation;
+
+- (void)rotateViewForOrientation:(UIInterfaceOrientation)interfaceOrientation;
+
+-(float)getCenterX;
+
+-(float)getRightX;
+
+-(float)getXforCenterX:(CGFloat)centerX;
+
+-(void)setOrigin:(CGPoint)origin;
+
+-(void)flipFrame;
+
+-(void)flipFrameSize;
+
+-(BOOL)frameMachesXPoint:(CGPoint)location;
+
+-(void)setFrameLeftInsideFrame:(CGRect)superFrame centered:(BOOL)centered;
+
+-(void)setFrameRightInsideFrame:(CGRect)superFrame centered:(BOOL)centered;
+
+-(void)setFrameBottomedInsideFrame:(CGRect)superFrame centered:(BOOL)centered;
+
+-(void)setFrameToppedInsideFrame:(CGRect)superFrame centered:(BOOL)centered;
+
+
+-(void)centerYInsideFrame:(CGRect)superFrame;
+
+-(void)centerXInsideFrame:(CGRect)superFrame;
+
+-(void)centerInsideFrame:(CGRect)superFrame;
+
+-(void)centerWithLandscapeOrientation;
+
+-(void)centerWithPortraitOrientation;
+
+-(void)shiftFrameY:(CGFloat)shift;
+
+-(void)setFrameY:(CGFloat)shift;
+
+-(void)shiftFrameX:(CGFloat)shift;
+
+-(void)setFrameX:(CGFloat)shift;
+
+-(void)shiftFrameWidth:(CGFloat)shift;
+
+-(void)setFrameWidth:(CGFloat)shift;
+
+-(void)shiftFrameHeight:(CGFloat)shift;
+
+-(void)setFrameHeight:(CGFloat)shift;
+
+-(void)setSize:(CGSize)sized;
+
+-(void)setSQFrame:(CGFloat)shift;
+
+-(void)setZeroPos;
+
+-(void)setZeroSize;
+
+-(UIInterfaceOrientation)shiftOrientRight:(UIInterfaceOrientation)interfaceOrientation;
+
+-(UIInterfaceOrientation)shiftOrientLeft:(UIInterfaceOrientation)interfaceOrientation;
+
+-(void)transformOrientation:(NSInteger)intOrientation;
+
+-(UIImage*)getUIImage;
+
+-(void)centerInOldFrame:(CGRect)olderFrame;
+
+-(UIImage *)getOpenGLUIImage;
+
+@end

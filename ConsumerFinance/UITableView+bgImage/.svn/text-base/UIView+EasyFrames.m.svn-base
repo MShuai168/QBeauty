@@ -1,0 +1,404 @@
+
+
+#import "UIView+EasyFrames.h"
+#import <objc/runtime.h>
+#import <OpenGLES/ES2/gl.h>
+
+@implementation UIView (EasyFrames)
+
+-(BOOL)frameMachesXPoint:(CGPoint)location{
+    if (location.x >= self.frame.origin.x) {
+        if (location.x <= self.frame.origin.x+self.frame.size.width) {
+            return YES;
+        }
+    }
+    return NO;
+}
+
+
+
+-(id)initAttach:(id)superItem
+{
+	self = [self init];
+	if ( self )
+	{
+        if ([superItem isKindOfClass:UIViewController.class]) {
+            [[(UIViewController*)superItem view] addSubview:self];
+        }
+        else if ([[superItem class] isSubclassOfClass:UIViewController.class]) {
+            [[(UIViewController*)superItem view] addSubview:self];
+        }
+        else if ([superItem isKindOfClass:UIView.class]) {
+            [superItem addSubview:self];
+        }
+        else if ([[superItem class] isSubclassOfClass:UIView.class]) {
+            [superItem addSubview:self];
+        }
+        else{
+            NSLog(@"I don't know what this strange item you are attempting to attach to is....");
+        }
+        
+//        if ([self respondsToSelector:@selector(setupSettings)]) {
+//            [self setupSettings];
+//        }
+	}
+	return self;
+}
+
+- (void)rotateViewForOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    switch (interfaceOrientation) {
+        case UIInterfaceOrientationLandscapeLeft:
+            self.transform = CGAffineTransformMakeRotation(M_PI + M_PI_2); // 90 degress
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            self.transform = CGAffineTransformMakeRotation(M_PI_2); // 270 degrees
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            self.transform = CGAffineTransformMakeRotation(M_PI); // 180 degreesu
+            break;
+        default:
+            self.transform = CGAffineTransformMakeRotation(0.0);
+            break;
+    }
+}
+
+-(void)setRotation:(CGFloat)rotation{
+    self.transform = CGAffineTransformMakeRotation(rotation);
+}
+
+
+-(float)getXforCenterX:(CGFloat)centerX{
+    return centerX - (self.frame.size.width / 2);
+}
+
+
+-(float)getCenterX{
+    return self.frame.origin.x + (self.frame.size.width / 2);
+}
+
+-(float)getRightX{
+    return self.frame.origin.x + self.frame.size.width;
+}
+
+-(void)setOrigin:(CGPoint)origin{
+    CGRect frame =self.frame;
+    frame.origin = origin;
+    self.frame = frame;
+}
+
+
+
+-(void)flipFrame{
+    CGRect frame =self.frame;
+    frame.origin.y = self.frame.origin.x;
+    frame.origin.x = self.frame.origin.y;
+    self.frame = frame;
+}
+
+-(void)flipFrameSize{
+    CGRect frame =self.frame;
+    frame.size.width = self.frame.size.height;
+    frame.size.height= self.frame.size.width;
+    self.frame = frame;
+}
+
+
+-(UIInterfaceOrientation)shiftOrientRight:(UIInterfaceOrientation)interfaceOrientation{
+    
+    switch (interfaceOrientation) {
+        case UIInterfaceOrientationLandscapeLeft:
+            return UIInterfaceOrientationPortrait;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            return UIInterfaceOrientationPortraitUpsideDown;
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            return UIInterfaceOrientationLandscapeLeft;
+            break;
+        default:
+            return UIInterfaceOrientationLandscapeRight;
+            break;
+    }
+}
+
+
+-(UIInterfaceOrientation)shiftOrientLeft:(UIInterfaceOrientation)interfaceOrientation{
+    
+    switch (interfaceOrientation) {
+        case UIInterfaceOrientationLandscapeLeft:
+            return UIInterfaceOrientationPortraitUpsideDown;
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            return UIInterfaceOrientationPortrait;
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            return UIInterfaceOrientationLandscapeRight;
+            break;
+        default:
+            return UIInterfaceOrientationLandscapeLeft;
+            break;
+    }
+}
+
+
+-(void)transformOrientation:(NSInteger)intOrientation{
+    UIInterfaceOrientation interfaceOrientation = (UIInterfaceOrientation)intOrientation;
+    switch (interfaceOrientation) {
+        case UIInterfaceOrientationLandscapeLeft:
+            self.transform = CGAffineTransformMakeRotation(M_PI + M_PI_2); // 90 degress
+            break;
+        case UIInterfaceOrientationLandscapeRight:
+            self.transform = CGAffineTransformMakeRotation(M_PI_2); // 270 degrees
+            break;
+        case UIInterfaceOrientationPortraitUpsideDown:
+            self.transform = CGAffineTransformMakeRotation(M_PI); // 180 degrees
+            break;
+        default:
+            self.transform = CGAffineTransformMakeRotation(0.0);
+            break;
+    }
+}
+
+
+
+-(CGPoint)iSize //RETURNS CURRENT SCREEN DIMENSIONS
+{
+    CGRect screenBound = [[UIScreen mainScreen] bounds];
+    CGSize screenSize = screenBound.size;
+    CGFloat screenWidth = screenSize.width;
+    CGFloat screenHeight = screenSize.height;
+    CGPoint retPoint;
+    retPoint.x = screenWidth;
+    retPoint.y = screenHeight;
+    return retPoint;
+    
+}
+
+
+
+-(void)setFrameLeftInsideFrame:(CGRect)superFrame centered:(BOOL)centered{
+    CGRect frame =self.frame;
+    frame.origin.x = 0;
+    if (centered) {
+        frame.origin.y = (superFrame.size.height/2) - (frame.size.height/2);
+    }
+    self.frame = frame;
+}
+
+-(void)setFrameRightInsideFrame:(CGRect)superFrame centered:(BOOL)centered{
+    CGRect frame =self.frame;
+    frame.origin.x = superFrame.size.width-self.frame.size.width;
+    if (centered) {
+        frame.origin.y = (superFrame.size.height/2) - (frame.size.height/2);
+    }
+    self.frame = frame;
+}
+
+
+-(void)setFrameBottomedInsideFrame:(CGRect)superFrame centered:(BOOL)centered{
+    
+    CGRect frame =self.frame;
+    frame.origin.y = superFrame.size.height-self.frame.size.height;
+    if (centered) {
+    frame.origin.x = (superFrame.size.width/2) - (frame.size.width/2);
+    }
+    self.frame = frame;
+}
+
+
+-(void)setFrameToppedInsideFrame:(CGRect)superFrame centered:(BOOL)centered{
+    
+    CGRect frame =self.frame;
+    frame.origin.y = 0;
+    if (centered) {
+        frame.origin.x = (superFrame.size.width/2) - (frame.size.width/2);
+    }
+    self.frame = frame;
+    
+}
+
+
+
+-(void)centerYInsideFrame:(CGRect)superFrame{
+    CGRect frame =self.frame;
+    frame.origin.y = (superFrame.size.height/2) - (frame.size.height/2);
+    self.frame = frame;
+}
+
+
+-(void)centerXInsideFrame:(CGRect)superFrame{
+    CGRect frame =self.frame;
+    frame.origin.x = (superFrame.size.width/2) - (frame.size.width/2);
+    self.frame = frame;
+}
+
+
+-(void)centerInsideFrame:(CGRect)superFrame{
+    CGRect frame =self.frame;
+    frame.origin.x = (superFrame.size.width/2) - (frame.size.width/2);
+    frame.origin.y = (superFrame.size.height/2) - (frame.size.height/2);
+    self.frame = frame;
+}
+
+-(void)centerWithLandscapeOrientation{
+    CGRect frame =self.frame;
+    frame.origin.x = ([self iSize].y/2) - (frame.size.width/2);
+    frame.origin.y = ([self iSize].x/2) - (frame.size.height/2);
+    self.frame = frame;
+}
+
+-(void)centerWithPortraitOrientation{
+    CGRect frame =self.frame;
+    frame.origin.x = ([self iSize].x/2) - (frame.size.width/2);
+    frame.origin.y = ([self iSize].y/2) - (frame.size.height/2);
+    self.frame = frame;
+}
+
+-(void)shiftFrameY:(CGFloat)shift{
+    CGRect frame =self.frame;
+    frame.origin.y+=shift;
+    self.frame = frame;
+}
+
+-(void)setFrameY:(CGFloat)shift{
+    CGRect frame =self.frame;
+    frame.origin.y=shift;
+    self.frame = frame;
+}
+
+-(void)shiftFrameX:(CGFloat)shift{
+    CGRect frame =self.frame;
+    frame.origin.x+=shift;
+    self.frame = frame;
+}
+
+-(void)setFrameX:(CGFloat)shift{
+    CGRect frame =self.frame;
+    frame.origin.x=shift;
+    self.frame = frame;
+}
+
+-(void)shiftFrameWidth:(CGFloat)shift{
+    CGRect frame =self.frame;
+    frame.size.width+=shift;
+     self.frame = frame;
+}
+
+-(void)setFrameWidth:(CGFloat)shift{
+    CGRect frame =self.frame;
+    frame.size.width=shift;
+    self.frame = frame;
+}
+
+-(void)shiftFrameHeight:(CGFloat)shift{
+    CGRect frame =self.frame;
+    frame.size.height+=shift;
+    self.frame = frame;
+}
+
+-(void)setFrameHeight:(CGFloat)shift{
+    CGRect frame =self.frame;
+    frame.size.height=shift;
+    self.frame = frame;
+}
+
+-(void)setSize:(CGSize)sized{
+    CGRect frame =self.frame;
+    frame.size= sized;
+    self.frame = frame;
+}
+
+-(void)setSQFrame:(CGFloat)shift{
+    CGRect frame =self.frame;
+    frame.size.height=shift;
+    frame.size.width=shift;
+    self.frame = frame;
+}
+
+-(void)setZeroPos{
+    CGRect frame =self.frame;
+    frame.origin.x=0;
+    frame.origin.y=0;
+    self.frame = frame;
+}
+
+-(void)setZeroSize{
+    CGRect frame =self.frame;
+    frame.size.width=0;
+    frame.size.height=0;
+    self.frame = frame;
+}
+
+-(UIImage*)getUIImage{
+    
+    UIGraphicsBeginImageContextWithOptions(self.bounds.size, self.opaque, 0.0);
+    
+    [[self layer] renderInContext: UIGraphicsGetCurrentContext()];
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    if (image) {
+        
+        NSLog(@"exists");
+    }
+    
+    return image;
+}
+
+-(void)centerInOldFrame:(CGRect)olderFrame
+{
+    CGRect frame = self.frame;
+    int x = (olderFrame.size.width/2) - (frame.size.width/2);
+    int y = (olderFrame.size.height/2) - (frame.size.height/2);
+    frame.origin.x += x;
+    frame.origin.y += y;
+    self.frame = frame;
+}
+
+-(UIImage *)getOpenGLUIImage
+{
+    int s = 1;
+    UIScreen* screen = [ UIScreen mainScreen ];
+    if ( [ screen respondsToSelector:@selector(scale) ] )
+        s = (int) [ screen scale ];
+    
+    const int w = self.frame.size.width;
+    const int h = self.frame.size.height;
+    const NSInteger myDataLength = w * h * 4 * s * s;
+    // allocate array and read pixels into it.
+    GLubyte *buffer = (GLubyte *) malloc(myDataLength);
+    glReadPixels(0, 0, w*s, h*s, GL_RGBA, GL_UNSIGNED_BYTE, buffer);
+    // gl renders "upside down" so swap top to bottom into new array.
+    // there's gotta be a better way, but this works.
+    GLubyte *buffer2 = (GLubyte *) malloc(myDataLength);
+    for(int y = 0; y < h*s; y++)
+    {
+        memcpy( buffer2 + (h*s - 1 - y) * w * 4 * s, buffer + (y * 4 * w * s), w * 4 * s );
+    }
+    free(buffer); // work with the flipped buffer, so get rid of the original one.
+    
+    // make data provider with data.
+    CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, buffer2, myDataLength, NULL);
+    // prep the ingredients
+    int bitsPerComponent = 8;
+    int bitsPerPixel = 32;
+    int bytesPerRow = 4 * w * s;
+    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
+    CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
+    // make the cgimage
+    CGImageRef imageRef = CGImageCreate(w*s, h*s, bitsPerComponent, bitsPerPixel, bytesPerRow, colorSpaceRef, bitmapInfo, provider, NULL, NO, renderingIntent);
+    // then make the uiimage from that
+    UIImage *myImage = [ UIImage imageWithCGImage:imageRef scale:s orientation:UIImageOrientationUp ];
+//    UIImageWriteToSavedPhotosAlbum( myImage, nil, nil, nil );
+    CGImageRelease( imageRef );
+    CGDataProviderRelease(provider);
+    CGColorSpaceRelease(colorSpaceRef);
+//    free(buffer2);
+    return myImage;
+}
+
+@end

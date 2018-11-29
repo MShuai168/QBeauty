@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReservationDetailHeaderView">
+            <connections>
+                <outlet property="reserveDateLabel" destination="3hy-RE-OIf" id="tOU-QY-Shp"/>
+                <outlet property="reserveStatusLabel" destination="pqS-AS-pL9" id="wHf-Gg-aFb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="zOl-3V-KGZ">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6xk-PQ-2qW">
+                    <rect key="frame" x="30" y="35" width="60" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="1it-fd-mjw"/>
+                        <constraint firstAttribute="height" constant="15" id="ggT-ae-4ns"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="待确认" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqS-AS-pL9">
+                    <rect key="frame" x="285" y="35" width="60" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="60" id="4RA-lV-cDF"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.99607843139999996" green="0.36078431370000003" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="预约时间：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FwW-iK-9TY">
+                    <rect key="frame" x="30" y="70" width="56.5" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="s7W-Tq-27z"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018.09.19    12:30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hy-RE-OIf">
+                    <rect key="frame" x="86.5" y="70" width="99.5" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="3hy-RE-OIf" firstAttribute="centerY" secondItem="FwW-iK-9TY" secondAttribute="centerY" id="7UU-Wf-mUe"/>
+                <constraint firstItem="FwW-iK-9TY" firstAttribute="top" secondItem="6xk-PQ-2qW" secondAttribute="bottom" constant="20" id="8RE-yI-3Zw"/>
+                <constraint firstItem="3hy-RE-OIf" firstAttribute="height" secondItem="FwW-iK-9TY" secondAttribute="height" id="8mG-av-fYw"/>
+                <constraint firstItem="3hy-RE-OIf" firstAttribute="leading" secondItem="FwW-iK-9TY" secondAttribute="trailing" id="JdI-hE-zON"/>
+                <constraint firstItem="6xk-PQ-2qW" firstAttribute="leading" secondItem="7Ze-5k-pXY" secondAttribute="leading" constant="30" id="PDT-2K-aKQ"/>
+                <constraint firstItem="pqS-AS-pL9" firstAttribute="centerY" secondItem="6xk-PQ-2qW" secondAttribute="centerY" id="Qck-EJ-MX0"/>
+                <constraint firstItem="6xk-PQ-2qW" firstAttribute="top" secondItem="7Ze-5k-pXY" secondAttribute="top" constant="35" id="U4G-o6-PIv"/>
+                <constraint firstItem="FwW-iK-9TY" firstAttribute="leading" secondItem="6xk-PQ-2qW" secondAttribute="leading" id="fCR-Nq-xRR"/>
+                <constraint firstItem="pqS-AS-pL9" firstAttribute="height" secondItem="6xk-PQ-2qW" secondAttribute="height" id="rdd-Vc-1ee"/>
+                <constraint firstItem="7Ze-5k-pXY" firstAttribute="trailing" secondItem="pqS-AS-pL9" secondAttribute="trailing" constant="30" id="wqg-BI-Mhk"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="7Ze-5k-pXY"/>
+            <point key="canvasLocation" x="551.5" y="-38"/>
+        </view>
+    </objects>
+</document>

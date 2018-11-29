@@ -1,0 +1,67 @@
+//
+//  UITableView+bgImage.m
+//  SafetyProduction
+//
+//  Created by MaShuai on 16/5/12.
+//  Copyright © 2016年 ShiZhengrui. All rights reserved.
+//
+
+#import "UITableView+bgImage.h"
+
+@implementation UITableView (bgImage)
+
+- (void) showNullDataImageViewWithStr:(NSString *)str andImage:(NSString *)image withIsShow:(BOOL)isShow
+{
+    UIView *backV = [[UIView alloc] initWithFrame:self.backgroundView.frame];
+    
+    if (isShow) {
+        UIImageView *imageV;
+        
+        imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
+        [imageV setFrame:CGRectMake((WIDTH - 100) / 2, 50, 100, 100)];
+        
+        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake((WIDTH - 150) / 2, 175, 150, 40)];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.text = str;
+        label.textColor = [UIColor colorWithHex:0x737373];
+        label.font = [UIFont systemFontOfSize:16];
+        
+        [backV addSubview:imageV];
+        [backV addSubview:label];
+        
+        self.backgroundView = backV;
+    }
+    else
+    {
+        self.backgroundView = backV;
+    }
+}
+// 自定义宽度
+- (void) showNullDataImageViewWithStr:(NSString *)str andImage:(NSString *)image withIsShow:(BOOL)isShow andWidth:(CGFloat)width
+{
+    UIView *backV = [[UIView alloc] initWithFrame:self.backgroundView.frame];
+    
+    if (isShow) {
+        UIImageView *imageV;
+        
+        imageV = [[UIImageView alloc] initWithImage:[UIImage imageNamed:image]];
+        [imageV setFrame:CGRectMake((width - 100) / 2, 50, 100, 100)];
+        
+        UILabel * label = [[UILabel alloc] initWithFrame:CGRectMake((width - 150) / 2, 175, 150, 40)];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.text = str;
+        label.textColor = [UIColor colorWithHex:0x737373];
+        label.font = [UIFont systemFontOfSize:16];
+        
+        [backV addSubview:imageV];
+        [backV addSubview:label];
+        
+        self.backgroundView = backV;
+    }
+    else
+    {
+        self.backgroundView = backV;
+    }
+}
+
+@end

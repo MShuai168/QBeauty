@@ -1,0 +1,16 @@
+//
+//  UITableView+bgImage.h
+//  SafetyProduction
+//
+//  Created by MaShuai on 16/5/12.
+//  Copyright © 2016年 ShiZhengrui. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+
+@interface UITableView (bgImage)
+
+- (void) showNullDataImageViewWithStr:(NSString *)str andImage:(NSString *)image withIsShow:(BOOL)isShow;
+- (void) showNullDataImageViewWithStr:(NSString *)str andImage:(NSString *)image withIsShow:(BOOL)isShow andWidth:(CGFloat)width;
+
+@end

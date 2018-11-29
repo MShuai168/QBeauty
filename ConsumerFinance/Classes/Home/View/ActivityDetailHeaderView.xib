@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActivityDetailHeaderView">
+            <connections>
+                <outlet property="bannerView" destination="K8I-xc-hLv" id="xLA-LC-YuH"/>
+                <outlet property="titleLabel" destination="SPw-0L-Ohp" id="Gp6-lK-1kR"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="388"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K8I-xc-hLv" customClass="ZYBannerView">
+                    <rect key="frame" x="0.0" y="1" width="375" height="332"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动时间" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wz6-lv-ZN9">
+                    <rect key="frame" x="10" y="343" width="85" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="85" id="HUo-B9-Gg7"/>
+                        <constraint firstAttribute="height" constant="35" id="vq8-lL-Ihi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018年09月25日17:11:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SPw-0L-Ohp">
+                    <rect key="frame" x="100" y="343" width="265" height="35"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Wz6-lv-ZN9" firstAttribute="top" secondItem="K8I-xc-hLv" secondAttribute="bottom" constant="10" id="96Q-mn-Wyf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Wz6-lv-ZN9" secondAttribute="bottom" constant="10" id="Boj-JH-rPv"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="SPw-0L-Ohp" secondAttribute="trailing" constant="10" id="K3z-r2-g9S"/>
+                <constraint firstItem="K8I-xc-hLv" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="1" id="MN8-Uf-g3M"/>
+                <constraint firstItem="SPw-0L-Ohp" firstAttribute="height" secondItem="Wz6-lv-ZN9" secondAttribute="height" id="NBv-Mb-Q1R"/>
+                <constraint firstItem="Wz6-lv-ZN9" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="10" id="RsZ-x3-uGu"/>
+                <constraint firstItem="K8I-xc-hLv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="TIZ-hx-GCc"/>
+                <constraint firstItem="SPw-0L-Ohp" firstAttribute="leading" secondItem="Wz6-lv-ZN9" secondAttribute="trailing" constant="5" id="jkg-qD-FI3"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="K8I-xc-hLv" secondAttribute="trailing" id="tiG-gc-8lh"/>
+                <constraint firstItem="SPw-0L-Ohp" firstAttribute="centerY" secondItem="Wz6-lv-ZN9" secondAttribute="centerY" id="uwW-CT-aHR"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="138.40000000000001" y="250.07496251874065"/>
+        </view>
+    </objects>
+</document>

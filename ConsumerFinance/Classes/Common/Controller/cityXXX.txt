@@ -1,0 +1,499 @@
+{"body":{
+  "cityupdatetime": "1504576190615",
+  "hotList": [
+    {
+      "id": "110100",
+      "cityName": "北京市",
+      "quanpin": "BEIJINGSHI",
+      "jianpin": "BJS",
+      "distList": ""
+    },
+    {
+      "id": "310100",
+      "cityName": "上海市",
+      "quanpin": "SHANGHAISHI",
+      "jianpin": "SHS",
+      "distList": ""
+    },
+    {
+      "id": "330100",
+      "cityName": "杭州市",
+      "quanpin": "HANGZHOUSHI",
+      "jianpin": "HZS",
+      "distList": ""
+    },
+    {
+      "id": "330200",
+      "cityName": "宁波市",
+      "quanpin": "NINGBOSHI",
+      "jianpin": "NBS",
+      "distList": ""
+    }
+  ],
+  "voList": [
+    {
+      "firstLetter": "A",
+      "letterList": [
+        {
+          "id": "610900",
+          "cityName": "安康市",
+          "quanpin": "ANKANGSHI",
+          "jianpin": "AKS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "B",
+      "letterList": [
+        {
+          "id": "110100",
+          "cityName": "北京市",
+          "quanpin": "BEIJINGSHI",
+          "jianpin": "BJS",
+          "distList": ""
+        },
+        {
+          "id": "530500",
+          "cityName": "保山市",
+          "quanpin": "BAOSHANSHI",
+          "jianpin": "BSS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "C",
+      "letterList": [
+        {
+          "id": "430100",
+          "cityName": "长沙市",
+          "quanpin": "CHANGSHASHI",
+          "jianpin": "CSS",
+          "distList": ""
+        },
+        {
+          "id": "510100",
+          "cityName": "成都市",
+          "quanpin": "CHENGDUSHI",
+          "jianpin": "CDS",
+          "distList": ""
+        },
+        {
+          "id": "532300",
+          "cityName": "楚雄彝族自治州",
+          "quanpin": "CHUXIONGYIZUZIZHIZHOU",
+          "jianpin": "CXYZZZZ",
+          "distList": ""
+        },
+        {
+          "id": "320400",
+          "cityName": "常州市",
+          "quanpin": "CHANGZHOUSHI",
+          "jianpin": "CZS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "D",
+      "letterList": [
+        {
+          "id": "532900",
+          "cityName": "大理白族自治州",
+          "quanpin": "DALIBAIZUZIZHIZHOU",
+          "jianpin": "DLBZZZZ",
+          "distList": ""
+        },
+        {
+          "id": "533400",
+          "cityName": "迪庆藏族自治州",
+          "quanpin": "DIQINGZANGZUZIZHIZHOU",
+          "jianpin": "DQZZZZZ",
+          "distList": ""
+        },
+        {
+          "id": "533100",
+          "cityName": "德宏傣族景颇族自治州",
+          "quanpin": "DEHONGDAIZUJINGPOZUZIZHIZHOU",
+          "jianpin": "DHDZJPZZZZ",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "F",
+      "letterList": [
+        {
+          "id": "350100",
+          "cityName": "福州市",
+          "quanpin": "FUZHOUSHI",
+          "jianpin": "FZS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "H",
+      "letterList": [
+        {
+          "id": "340100",
+          "cityName": "合肥市",
+          "quanpin": "HEFEISHI",
+          "jianpin": "HFS",
+          "distList": ""
+        },
+        {
+          "id": "532500",
+          "cityName": "红河哈尼族彝族自治州",
+          "quanpin": "HONGHEHANIZUYIZUZIZHIZHOU",
+          "jianpin": "HHHNZYZZZZ",
+          "distList": ""
+        },
+        {
+          "id": "320800",
+          "cityName": "淮安市",
+          "quanpin": "HUAIANSHI",
+          "jianpin": "HAS",
+          "distList": ""
+        },
+        {
+          "id": "330100",
+          "cityName": "杭州市",
+          "quanpin": "HANGZHOUSHI",
+          "jianpin": "HZS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "J",
+      "letterList": [
+        {
+          "id": "360400",
+          "cityName": "九江市",
+          "quanpin": "JIUJIANGSHI",
+          "jianpin": "JJS",
+          "distList": ""
+        },
+        {
+          "id": "370100",
+          "cityName": "济南市",
+          "quanpin": "JINANSHI",
+          "jianpin": "JNS",
+          "distList": ""
+        },
+        {
+          "id": "330700",
+          "cityName": "金华市",
+          "quanpin": "JINHUASHI",
+          "jianpin": "JHS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "K",
+      "letterList": [
+        {
+          "id": "530100",
+          "cityName": "昆明市",
+          "quanpin": "KUNMINGSHI",
+          "jianpin": "KMS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "L",
+      "letterList": [
+        {
+          "id": "530900",
+          "cityName": "临沧市",
+          "quanpin": "LINCANGSHI",
+          "jianpin": "LCS",
+          "distList": ""
+        },
+        {
+          "id": "341500",
+          "cityName": "六安市",
+          "quanpin": "LIUANSHI",
+          "jianpin": "LAS",
+          "distList": ""
+        },
+        {
+          "id": "530700",
+          "cityName": "丽江市",
+          "quanpin": "LIJIANGSHI",
+          "jianpin": "LJS",
+          "distList": ""
+        },
+        {
+          "id": "620100",
+          "cityName": "兰州市",
+          "quanpin": "LANZHOUSHI",
+          "jianpin": "LZS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "N",
+      "letterList": [
+        {
+          "id": "450100",
+          "cityName": "南宁市",
+          "quanpin": "NANNINGSHI",
+          "jianpin": "NNS",
+          "distList": ""
+        },
+        {
+          "id": "320100",
+          "cityName": "南京市",
+          "quanpin": "NANJINGSHI",
+          "jianpin": "NJS",
+          "distList": ""
+        },
+        {
+          "id": "360100",
+          "cityName": "南昌市",
+          "quanpin": "NANCHANGSHI",
+          "jianpin": "NCS",
+          "distList": ""
+        },
+        {
+          "id": "320600",
+          "cityName": "南通市",
+          "quanpin": "NANTONGSHI",
+          "jianpin": "NTS",
+          "distList": ""
+        },
+        {
+          "id": "533300",
+          "cityName": "怒江傈僳族自治州",
+          "quanpin": "NUJIANGLISUZUZIZHIZHOU",
+          "jianpin": "NJLSZZZZ",
+          "distList": ""
+        },
+        {
+          "id": "330200",
+          "cityName": "宁波市",
+          "quanpin": "NINGBOSHI",
+          "jianpin": "NBS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "Q",
+      "letterList": [
+        {
+          "id": "370200",
+          "cityName": "青岛市",
+          "quanpin": "QINGDAOSHI",
+          "jianpin": "QDS",
+          "distList": ""
+        },
+        {
+          "id": "530300",
+          "cityName": "曲靖市",
+          "quanpin": "QUJINGSHI",
+          "jianpin": "QJS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "S",
+      "letterList": [
+        {
+          "id": "530800",
+          "cityName": "思茅市",
+          "quanpin": "SIMAOSHI",
+          "jianpin": "SMS",
+          "distList": ""
+        },
+        {
+          "id": "330600",
+          "cityName": "绍兴市",
+          "quanpin": "SHAOXINGSHI",
+          "jianpin": "SXS",
+          "distList": ""
+        },
+        {
+          "id": "310100",
+          "cityName": "上海市",
+          "quanpin": "SHANGHAISHI",
+          "jianpin": "SHS",
+          "distList": ""
+        },
+        {
+          "id": "440300",
+          "cityName": "深圳市",
+          "quanpin": "SHENZUOSHI",
+          "jianpin": "SZS",
+          "distList": ""
+        },
+        {
+          "id": "320500",
+          "cityName": "苏州市",
+          "quanpin": "SUZHOUSHI",
+          "jianpin": "SZS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "T",
+      "letterList": [
+        {
+          "id": "331000",
+          "cityName": "台州市",
+          "quanpin": "TAIZHOUSHI",
+          "jianpin": "TZS",
+          "distList": ""
+        },
+        {
+          "id": "610200",
+          "cityName": "铜川市",
+          "quanpin": "TONGCHUANSHI",
+          "jianpin": "TCS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "W",
+      "letterList": [
+        {
+          "id": "320200",
+          "cityName": "无锡市",
+          "quanpin": "WUXISHI",
+          "jianpin": "WXS",
+          "distList": ""
+        },
+        {
+          "id": "420100",
+          "cityName": "武汉市",
+          "quanpin": "WUHANSHI",
+          "jianpin": "WHS",
+          "distList": ""
+        },
+        {
+          "id": "340200",
+          "cityName": "芜湖市",
+          "quanpin": "WUHUSHI",
+          "jianpin": "WHS",
+          "distList": ""
+        },
+        {
+          "id": "532600",
+          "cityName": "文山壮族苗族自治州",
+          "quanpin": "WENSHANZHUANGZUMIAOZUZIZHIZHOU",
+          "jianpin": "WSZZMZZZZ",
+          "distList": ""
+        },
+        {
+          "id": "330300",
+          "cityName": "温州市",
+          "quanpin": "WENZHOUSHI",
+          "jianpin": "WZS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "X",
+      "letterList": [
+        {
+          "id": "350200",
+          "cityName": "厦门市",
+          "quanpin": "XIAMENSHI",
+          "jianpin": "XMS",
+          "distList": ""
+        },
+        {
+          "id": "532800",
+          "cityName": "西双版纳傣族自治州",
+          "quanpin": "XISHUANGBANNADAIZUZIZHIZHOU",
+          "jianpin": "XSBNDZZZZ",
+          "distList": ""
+        },
+        {
+          "id": "130500",
+          "cityName": "邢台市",
+          "quanpin": "XINGTAISHI",
+          "jianpin": "XTS",
+          "distList": ""
+        },
+        {
+          "id": "341800",
+          "cityName": "宣城市",
+          "quanpin": "XUANCHENGSHI",
+          "jianpin": "XCS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "Y",
+      "letterList": [
+        {
+          "id": "321000",
+          "cityName": "扬州市",
+          "quanpin": "YANGZHOUSHI",
+          "jianpin": "YZS",
+          "distList": ""
+        },
+        {
+          "id": "530400",
+          "cityName": "玉溪市",
+          "quanpin": "YUXISHI",
+          "jianpin": "YXS",
+          "distList": ""
+        }
+      ]
+    },
+    {
+      "firstLetter": "Z",
+      "letterList": [
+        {
+          "id": "530600",
+          "cityName": "昭通市",
+          "quanpin": "ZHAOTONGSHI",
+          "jianpin": "ZTS",
+          "distList": ""
+        },
+        {
+          "id": "410100",
+          "cityName": "郑州市",
+          "quanpin": "ZHENGZHOUSHI",
+          "jianpin": "ZZS",
+          "distList": ""
+        },
+        {
+          "id": "500100",
+          "cityName": "重庆市",
+          "quanpin": "CHONGQINGSHI",
+          "jianpin": "CQS",
+          "distList": ""
+        },
+        {
+          "id": "500300",
+          "cityName": "重庆县级市",
+          "quanpin": "CHONGQINGXIANJISHI",
+          "jianpin": "CQXJS",
+          "distList": ""
+        },
+        {
+          "id": "500200",
+          "cityName": "重庆郊区",
+          "quanpin": "CHONGQINGJIAOQU",
+          "jianpin": "CQJQ",
+          "distList": ""
+        }
+       ]
+     }
+   ]
+  }
+}

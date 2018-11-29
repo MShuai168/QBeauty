@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MeteringCardDetailFooterView">
+            <connections>
+                <outlet property="shopNameLabel" destination="Igg-yG-tjl" id="Uu1-Pa-0Nf"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xu-hq-S9s">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
+                    <color key="backgroundColor" red="0.96078431372549022" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="9gZ-oX-Bfg"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="办卡门店：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i25-ap-1i7">
+                    <rect key="frame" x="20" y="16" width="56.5" height="15"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="15" id="ChM-Lj-o36"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.53725490196078429" green="0.53725490196078429" blue="0.53725490196078429" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="心意店" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Igg-yG-tjl">
+                    <rect key="frame" x="76.5" y="16" width="34" height="15"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                    <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Igg-yG-tjl" firstAttribute="leading" secondItem="i25-ap-1i7" secondAttribute="trailing" id="62s-U5-iNr"/>
+                <constraint firstItem="Igg-yG-tjl" firstAttribute="centerY" secondItem="i25-ap-1i7" secondAttribute="centerY" id="C1F-5w-KYY"/>
+                <constraint firstItem="4xu-hq-S9s" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="IUH-8o-rrE"/>
+                <constraint firstItem="4xu-hq-S9s" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Pg3-9q-JZb"/>
+                <constraint firstItem="i25-ap-1i7" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="QIo-Q2-O63"/>
+                <constraint firstItem="i25-ap-1i7" firstAttribute="top" secondItem="4xu-hq-S9s" secondAttribute="bottom" constant="15" id="SKK-L0-ny2"/>
+                <constraint firstItem="Igg-yG-tjl" firstAttribute="height" secondItem="i25-ap-1i7" secondAttribute="height" id="acG-1Z-92N"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="4xu-hq-S9s" secondAttribute="trailing" id="iIJ-kn-HDf"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="33.5" y="83"/>
+        </view>
+    </objects>
+</document>

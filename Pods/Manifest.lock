@@ -1,0 +1,119 @@
+PODS:
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AFNetworking/UIKit (3.2.1):
+    - AFNetworking/NSURLSession
+  - AliyunOSSiOS (2.10.5)
+  - CYLTabBarController (1.17.16)
+  - FLAnimatedImage (1.0.12)
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.0.0)
+  - MJExtension (3.0.15.1)
+  - MJRefresh (3.1.15.7)
+  - NYTPhotoViewer (1.1.0):
+    - NYTPhotoViewer/AnimatedGifSupport (= 1.1.0)
+    - NYTPhotoViewer/Core (= 1.1.0)
+  - NYTPhotoViewer/AnimatedGifSupport (1.1.0):
+    - FLAnimatedImage (~> 1.0.8)
+    - NYTPhotoViewer/Core
+  - NYTPhotoViewer/Core (1.1.0)
+  - RZDataBinding (2.1.0)
+  - SDWebImage (3.8.2):
+    - SDWebImage/Core (= 3.8.2)
+  - SDWebImage/Core (3.8.2)
+  - SSZipArchive (2.1.3)
+  - "UITableView+FDTemplateLayoutCell (1.6)"
+  - UMengAnalytics (4.2.4)
+  - WebViewJavascriptBridge (6.0.2)
+  - WechatOpenSDK (1.8.2)
+  - Weibo_SDK (3.2.3)
+  - ZYBannerView (1.1.4)
+
+DEPENDENCIES:
+  - AFNetworking (~> 3.0)
+  - AliyunOSSiOS
+  - CYLTabBarController
+  - FMDB (~> 2.6.2)
+  - Masonry
+  - MBProgressHUD (~> 1.0.0)
+  - MJExtension (~> 3.0.0)
+  - MJRefresh
+  - NYTPhotoViewer (~> 1.1.0)
+  - RZDataBinding
+  - SDWebImage (~> 3.8)
+  - SSZipArchive
+  - "UITableView+FDTemplateLayoutCell"
+  - UMengAnalytics
+  - WebViewJavascriptBridge (from `https://github.com/BernardChina/WebViewJavascriptBridge.git`)
+  - WechatOpenSDK
+  - Weibo_SDK
+  - ZYBannerView
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - AliyunOSSiOS
+    - CYLTabBarController
+    - FLAnimatedImage
+    - FMDB
+    - Masonry
+    - MBProgressHUD
+    - MJExtension
+    - MJRefresh
+    - NYTPhotoViewer
+    - RZDataBinding
+    - SDWebImage
+    - SSZipArchive
+    - "UITableView+FDTemplateLayoutCell"
+    - UMengAnalytics
+    - WechatOpenSDK
+    - Weibo_SDK
+    - ZYBannerView
+
+EXTERNAL SOURCES:
+  WebViewJavascriptBridge:
+    :git: https://github.com/BernardChina/WebViewJavascriptBridge.git
+
+CHECKOUT OPTIONS:
+  WebViewJavascriptBridge:
+    :commit: cdde32a3e1437d80abb2993355cf0a9c4a280991
+    :git: https://github.com/BernardChina/WebViewJavascriptBridge.git
+
+SPEC CHECKSUMS:
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AliyunOSSiOS: 53df437f24309bdfbe2df21b4f6be4f75474f00a
+  CYLTabBarController: fb72c648645336953d522407892c4f61b7b3f898
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  MJExtension: 19bc33ce2eee2d319760f5622562cf581a6ff756
+  MJRefresh: 697f8ec75ebdbe9207767bb682cf0f51b0d8a41f
+  NYTPhotoViewer: e80e8767f3780d2df37c6f72cbab15d6c7232911
+  RZDataBinding: 6981e90ddaae2f5e02028323b1043f8c31013109
+  SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
+  SSZipArchive: 51a800ebb77f95a8329b6ced1faaff394b47f509
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
+  WebViewJavascriptBridge: 791ee0e26d1bf15efe5fb7fb9666a71a19b89d77
+  WechatOpenSDK: 676feec516a11173eafd1fe64b10d27babf28701
+  Weibo_SDK: 652ca78c2f7147a5de5e75e7cbea89838a81772a
+  ZYBannerView: 477bcb8c38bb0b2a45bae014f9e4fa8357809023
+
+PODFILE CHECKSUM: 5c178a1b3106686fc3de08b1b95428ecec18a921
+
+COCOAPODS: 1.5.3
